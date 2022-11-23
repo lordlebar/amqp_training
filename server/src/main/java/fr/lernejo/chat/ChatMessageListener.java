@@ -13,5 +13,7 @@ public class ChatMessageListener {
 
     public void onMessage(String message) {
         repository.addChatMessage(message);
+
     }
+
 }

@@ -15,10 +15,14 @@ public class ChatMessageRepository {
     }
 
     public void addChatMessage(String message) {
+        if(messages.size() >= 10){
+            messages.remove(0);
+        }
         messages.add(message);
     }
 
     public List<String> getLastTenMessages() {
-        return messages.subList(0, Math.min(messages.size(), 10));
+        return this.messages;
     }
+
 }
